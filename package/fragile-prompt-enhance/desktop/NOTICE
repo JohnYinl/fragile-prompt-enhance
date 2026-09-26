@@ -1,0 +1,134 @@
+# NOTICE — fragile-prompt-enhance
+
+本文件是 **`desktop/` 半随包携带的副本**：宿主安装本插件时会把统一包里的 `desktop/` 目录
+**复制**到 `<HERMES_HOME>/desktop-plugins/<name>/`（`.hermes-package.json` 标记），这一复制路径
+不会带上上一层的 `NOTICE`，所以署名与许可全文在此重复一份。内容与
+`package/fragile-prompt-enhance/NOTICE` 逐字一致。
+
+本插件包（fragile-prompt-enhance）的代码由 **Ludens** 编写，按 MIT 许可证发布。
+
+其出厂默认提示词模板（`desktop/plugin.js` 的 `DEFAULT_TEMPLATES`）在编写时融合并部分译写了
+若干第三方提示词插件。**本文件随被复制的那一半一起走**，以满足下列来源的署名义务。
+
+本文件不是对上游权利归属的司法或法律确认，只记录我们实际读到过的许可声明与文本。
+
+---
+
+## 1. WB-Enhance-Prompt（`WB-Enhance-Prompt-1.5.6-share`）
+
+许可：**MIT**；版权人：`Copyright (c) 2026 WB Enhance Prompt contributors`
+（分享包内 `LICENSE` 明文；脚本头另有 `SPDX-License-Identifier: MIT`）
+
+该分享包的 `LICENSE` 明文覆盖「本分享包的全部内容，包括但不限于：脚本代码、内嵌提示词模板
+（WorkBuddy 原版与创意增强模式）、排版规则、README 文档及注释」。本插件出厂模板中多条条款
+译写自其 `WORKBUDDY_SYSTEM_TEMPLATE` 与创意增强模板。
+
+据实记录而不作引申：该脚本自述 `community port; not an official WorkBuddy or Augment product`，
+其模板注释自述「来自用户提供的 WorkBuddy 文档」。因此上列 MIT 授权是**分享包署名方给出的
+对外授权**，我们据此发布，并不声称它等同于对上游 WorkBuddy 文档权利归属的确认。
+
+```
+MIT License
+
+Copyright (c) 2026 WB Enhance Prompt contributors
+
+本许可证覆盖本分享包的全部内容，包括但不限于：
+脚本代码、内嵌提示词模板（WorkBuddy 原版与创意增强模式）、
+排版规则、README 文档及注释。
+This license applies to the entire contents of this package, including but
+not limited to: the script source code, the embedded prompt templates
+(WorkBuddy mode and Creative mode), output layout rules, the README,
+and all comments.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### 1.1 随其分发的 Lucide 图标（ISC）
+
+```
+Icons adapted from Lucide v1.8.0 (Sparkles, LoaderCircle, Undo2, X), ISC License.
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+```
+
+本项目不复用其图标资源，只复用提示词文本；上列 ISC 声明随来源一并记录。
+
+---
+
+## 2. Heybinshao/prompt-enhancer
+
+来源：https://github.com/Heybinshao/prompt-enhancer
+锁定提交：`8fb4e23d7e25aacf41e3be6e5c91d72af0829e86`
+许可：**MIT**；版权人：`Copyright (c) 2026 Binshao`
+
+使用方式：`precise` / `creative` 两套模板的部分条款译写自其 `desktop/plugin.js` 的
+`SYSTEM_TEMPLATE` 与硬性约束文本（尤其是「语言跟随」与「只改写不执行」两类规则）。
+
+其 MIT 许可要求：在所有副本或实质部分中保留下列版权声明与许可全文。
+
+```
+MIT License
+
+Copyright (c) 2026 Binshao
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 3. 已核许可、本轮未复用其文本（无署名义务，留痕备查）
+
+- **apoapostolov/hermes-agent-awesome-plugins**（`public/prompt-enhance/`），锁定提交
+  `b1d5ea1363d4f830967da4ae4748d006b07fee0e`，MIT，`Copyright (c) 2026 Apostol Apostolov`。
+  本轮**未复用其文本**。
+- **Sahil-SS9/hermes-multichannel-prompt-optimizer**，目录条目提交
+  `e83eba9a8e102ed255a5bfd20cc88ea50e3af28f`，MIT，`Copyright (c) 2026 Sahil Saghir`。
+  本轮**未打开其源码、未复用任何内容**。
+
+## 4. 作者自有的方法来源
+
+「解构 → 重构 → 复核 → 只输出」工作流骨架，以及「实体」「受众」两项，来自作者本人提供的
+「AI 提示词优化专家」方法，不涉及第三方许可。

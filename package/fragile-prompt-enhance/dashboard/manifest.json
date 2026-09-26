@@ -1,0 +1,13 @@
+{
+  "name": "fragile-prompt-enhance",
+  "label": "Fragile Prompt Enhance",
+  "version": "1.0.0",
+  "description": "Backend for the Fragile Prompt Enhance composer button: one host-owned LLM call per run.",
+  "icon": "Sparkle",
+  "tab": {
+    "hidden": true
+  },
+  "slots": [],
+  "entry": "entry.js",
+  "api": "plugin_api.py"
+}

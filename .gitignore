@@ -1,0 +1,36 @@
+# ── Local-only: machine-specific records and pre-change backups ──────────────
+# Kept on disk, deliberately never published.
+backups/
+about.md
+docs/部署记录-*.md
+docs/运行验收-*.md
+docs/发布候选清单与安全扫描.md
+
+# ── Logs / runtime residue ───────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ── Node ─────────────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Test-harness scratch ─────────────────────────────────────────────────────
+# Regenerated on every desktop-suite run; thousands of timestamped .mjs files.
+tests/.harness/
+
+# ── Credentials / local config (never commit) ────────────────────────────────
+.env
+.env.*
+!.env.example
+config.local.yaml
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json

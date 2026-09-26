@@ -1,0 +1,54 @@
+# Agent-half manifest for the unified Fragile Prompt Enhance package.
+#
+# A directory plugin needs this file plus an `__init__.py` exposing
+# `register(ctx)` — that is exactly how the plugin manager finds our agent half
+# (hermes_cli/plugins_loader.py: `register_fn = getattr(module, "register", None)`).
+name: fragile-prompt-enhance
+version: 1.0.0
+description: >-
+  Adds one native composer button to Hermes Desktop that rewrites the current
+  draft (precise / creative) through the host-owned ctx.llm and shows a
+  reference self-score for the original and the rewrite.
+author: Ludens
+# MIT. The plugin's own code is the author's to license, and the shipped default
+# TEMPLATES are derived from third-party prompt plugins that are themselves MIT:
+#   - WB-Enhance-Prompt 1.5.6-share — MIT, "Copyright (c) 2026 WB Enhance Prompt
+#     contributors"; its LICENSE covers the embedded prompt templates explicitly.
+#   - Heybinshao/prompt-enhancer  — MIT, "Copyright (c) 2026 Binshao".
+# Both notices, with the full licence texts, travel with this package in NOTICE
+# (and in desktop/NOTICE, which is the half the host copies to desktop-plugins/).
+# Per-clause provenance: docs/来源映射与许可.md and THIRD-PARTY-NOTICES.md.
+license: MIT
+kind: standalone
+tags:
+  - prompt
+  - composer
+  - desktop
+  - i18n
+homepage: https://hermes-agent.nousresearch.com/docs/developer-guide/desktop-plugin-sdk
+
+# The agent half owns exactly one thing: publishing the live PluginContext so the
+# plugin's own dashboard router (dashboard/plugin_api.py) can reach `ctx.llm`.
+# It registers no hooks, tools or middleware — this plugin never intercepts or
+# alters a Hermes turn.
+provides_hooks: []
+provides_tools: []
+
+# Hermes never auto-installs these; declared for surfacing only. This plugin
+# installs NOTHING and imports nothing outside the Hermes runtime + stdlib.
+python_dependencies: []
+
+# Advisory declaration of exactly the two trust gates this plugin can exercise:
+# pinning the model and/or the provider for an enhancement run. Both ids come
+# from the official registry (hermes_cli/plugin_capabilities.CAPABILITY_REGISTRY)
+# and map to the legacy booleans under plugins.entries.fragile-prompt-enhance.llm
+# (allow_model_override / allow_provider_override), which is the layer
+# agent/plugin_llm.py actually enforces. Declaring a capability neither requests
+# a grant nor changes any config — a grant only happens when the operator
+# consents, and until then this plugin refuses a pinned run up front instead of
+# silently falling back to the session model.
+#
+# NOT declared (nothing here reads their gate):
+#   llm.agent_id_override, llm.profile_override, llm.task_override,
+#   tools.override, gateway.platform_actions
+capabilities: ["llm.model_override", "llm.provider_override"]
