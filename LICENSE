@@ -19,13 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This project ships default prompt templates derived from third-party prompt
-plugins that are themselves released under the MIT License. Their copyright
-notices and full licence texts are reproduced in:
-
-    THIRD-PARTY-NOTICES.md          (repository root)
-    package/fragile-prompt-enhance/NOTICE          (ships with the plugin package)
-    package/fragile-prompt-enhance/desktop/NOTICE  (ships with the copied desktop half)
